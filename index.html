@@ -290,9 +290,10 @@
   opacity: 1;
   transform: translateY(0);
 }
-    
-    
-
+/* ===== CATEGORY VISIBILITY FIX ===== */
+.category-section {
+  display: block;
+}
   </style>
 </head>
 
@@ -409,45 +410,34 @@
 </footer>
 
 <script>
-function filterAndScroll(category, targetId) {
-  const galleries = document.querySelectorAll('.gallery');
+function showCategory(id) {
   const sections = document.querySelectorAll('.category-section');
 
-  // Filter galleries
-  galleries.forEach(gallery => {
-    if (category === 'all' || gallery.classList.contains(category)) {
-      gallery.style.display = 'grid';
-    } else {
-      gallery.style.display = 'none';
-    }
-  });
-
-  // Hide non-selected section titles
   sections.forEach(section => {
-    if (category === 'all' || section.id === targetId) {
-      section.style.display = 'block';
-    } else {
-      section.style.display = 'none';
-    }
+    section.style.display = 'none';
   });
 
-  // Scroll smoothly
-  const target = document.getElementById(targetId);
+  const target = document.getElementById(id);
   if (target) {
-    setTimeout(() => {
-      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }, 100);
+    target.style.display = 'block';
+    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
 }
+
+function showAll() {
+  const sections = document.querySelectorAll('.category-section');
+
+  sections.forEach(section => {
+    section.style.display = 'block';
+  });
+
+  document.getElementById('portfolio')
+    .scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
 </script>
-
-
-
-
-
-
 </body>
 </html>
+
 
 
 
