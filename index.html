@@ -10,20 +10,52 @@
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body { font-family: 'Poppins', sans-serif; background: #0f0f0f; color: #fff; }
     a { text-decoration: none; color: inherit; }
-    /* ===== FILTER BAR ===== */
+   /* ===== FILTER BAR ===== */
 .filters {
   position: sticky;
   top: 80px;
-  z-index: 20;
+  z-index: 50;
+
   display: flex;
+  justify-content: center;
   gap: 10px;
-  padding: 12px 16px;
-  background: rgba(0, 0, 0, 0.65);
-  backdrop-filter: blur(10px);
-  border-radius: 14px;
-  margin: 40px auto;
+
+  padding: 14px 18px;
+  margin: 30px auto;
+
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(12px);
+
+  border-radius: 999px;
   width: fit-content;
 }
+
+/* REMOVE DEFAULT BUTTON STYLES */
+.filters button {
+  all: unset;                /* 🔥 THIS IS THE KEY */
+  cursor: pointer;
+
+  padding: 8px 18px;
+  font-size: 14px;
+  font-weight: 500;
+
+  color: #fff;
+  border-radius: 999px;
+
+  transition: all 0.25s ease;
+}
+
+/* HOVER */
+.filters button:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* ACTIVE */
+.filters button.active {
+  background: #fff;
+  color: #000;
+}
+
 
 .filters button {
   padding: 8px 18px;
@@ -156,7 +188,7 @@ section h2 {
     </div>
   </header>
 
-  <div class="filters">
+ <div class="filters">
   <button class="active" onclick="filterGallery('all', this)">All</button>
   <button onclick="filterGallery('Concerts', this)">Concerts</button>
   <button onclick="filterGallery('Dance', this)">Dance</button>
@@ -285,16 +317,15 @@ section h2 {
 
 <script>
 function filterGallery(category, btn) {
-  const galleries = document.querySelectorAll('.gallery');
-  const buttons = document.querySelectorAll('.filters button');
+  document.querySelectorAll('.filters button').forEach(b => {
+    b.classList.remove('active');
+  });
 
-  buttons.forEach(b => b.classList.remove('active'));
   btn.classList.add('active');
 
-  galleries.forEach(gallery => {
+  document.querySelectorAll('.gallery').forEach(gallery => {
     if (category === 'all' || gallery.classList.contains(category)) {
       gallery.style.display = 'grid';
-      gallery.style.opacity = 1;
     } else {
       gallery.style.display = 'none';
     }
@@ -302,11 +333,13 @@ function filterGallery(category, btn) {
 }
 </script>
 
+
 </body>
 </html>
 
 </body>
 </html>
+
 
 
 
