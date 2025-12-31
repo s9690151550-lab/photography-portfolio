@@ -12,65 +12,151 @@
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:Poppins,sans-serif;background:#0b0b0b;color:#fff;line-height:1.6}
+body{
+  font-family:Poppins,sans-serif;
+  background:#0b0b0b;
+  color:#fff;
+  line-height:1.6;
+}
 
 /* NAV */
-nav{position:sticky;top:0;z-index:100;background:#000;padding:14px 18px;display:flex;justify-content:space-between;align-items:center}
-nav a{color:#fff;text-decoration:none;margin-left:14px;font-size:14px}
+nav{
+  position:sticky;
+  top:0;
+  z-index:100;
+  background:#000;
+  padding:14px 18px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+nav a{
+  color:#fff;
+  text-decoration:none;
+  margin-left:14px;
+  font-size:14px;
+}
 
 /* HEADER */
-header{text-align:center;padding:70px 16px 40px}
-header h1{font-size:32px;font-weight:600}
-header p{opacity:.75;font-size:14px;margin-top:8px}
+header{
+  text-align:center;
+  padding:70px 16px 40px;
+}
+header h1{
+  font-size:32px;
+  font-weight:600;
+}
+header p{
+  opacity:.75;
+  font-size:14px;
+  margin-top:8px;
+}
 
 /* FILTERS */
-.filters{display:flex;gap:10px;overflow-x:auto;padding:12px;background:#111}
-.filters button{flex:0 0 auto;background:none;border:1px solid #444;color:#fff;padding:8px 14px;border-radius:20px;font-size:13px;cursor:pointer}
+.filters{
+  display:flex;
+  gap:10px;
+  overflow-x:auto;
+  padding:12px;
+  background:#111;
+}
+.filters button{
+  flex:0 0 auto;
+  background:none;
+  border:1px solid #444;
+  color:#fff;
+  padding:8px 14px;
+  border-radius:20px;
+  font-size:13px;
+  cursor:pointer;
+}
 
 /* SECTIONS */
-section{padding:40px 16px}
-.category-section{margin-bottom:60px}
-.section-title{font-size:22px}
-.section-title span{display:block;font-size:13px;opacity:.7}
+section{
+  padding:40px 16px;
+}
+.category-section{
+  margin-bottom:60px;
+}
+.section-title{
+  font-size:22px;
+}
+.section-title span{
+  display:block;
+  font-size:13px;
+  opacity:.7;
+}
 
 /* GALLERY */
-.gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:16px}
-.photo{position:relative;cursor:pointer}
-.photo img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:10px}
-.photo::after{
-  content:"© Simarpreet Singh";
-  position:absolute;bottom:6px;right:6px;
-  font-size:10px;background:rgba(0,0,0,.5);
-  padding:3px 6px;border-radius:4px
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:10px;
+  margin-top:16px;
 }
-
-/* LIGHTBOX */
-.lightbox{
-  position:fixed;top:0;left:0;width:100%;height:100%;
-  background:rgba(0,0,0,.9);
-  display:none;align-items:center;justify-content:center;
-  z-index:999;
+.photo{
+  position:relative;
 }
-.lightbox img{
-  max-width:95%;
-  max-height:90%;
+.photo img{
+  width:100%;
+  aspect-ratio:3/4;
+  object-fit:cover;
   border-radius:10px;
 }
-.lightbox span{
-  position:absolute;top:20px;right:25px;
-  font-size:32px;color:#fff;cursor:pointer;
+.photo::after{
+  content:"© Simarpreet Singh";
+  position:absolute;
+  bottom:6px;
+  right:6px;
+  font-size:10px;
+  background:rgba(0,0,0,.5);
+  padding:3px 6px;
+  border-radius:4px;
 }
 
 /* CONTACT */
 #contact{text-align:center}
-.contact-buttons{display:flex;flex-direction:column;gap:10px;margin:20px auto}
-.contact-buttons a{border:1px solid #444;padding:10px;border-radius:30px;color:#fff;text-decoration:none;font-size:14px}
-.contact-form{margin-top:20px;display:grid;gap:12px}
-.contact-form input,.contact-form textarea{padding:12px;border-radius:8px;border:none}
-.contact-form button{padding:12px;border-radius:30px;border:none;background:#fff;color:#000;font-weight:600}
+.contact-buttons{
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+  margin:20px auto;
+}
+.contact-buttons a{
+  border:1px solid #444;
+  padding:10px;
+  border-radius:30px;
+  color:#fff;
+  text-decoration:none;
+  font-size:14px;
+}
+.contact-form{
+  margin-top:20px;
+  display:grid;
+  gap:12px;
+}
+.contact-form input,
+.contact-form textarea{
+  padding:12px;
+  border-radius:8px;
+  border:none;
+}
+.contact-form button{
+  padding:12px;
+  border-radius:30px;
+  border:none;
+  background:#fff;
+  color:#000;
+  font-weight:600;
+}
 
 /* FOOTER */
-footer{text-align:center;padding:20px;font-size:12px;opacity:.6}
+footer{
+  text-align:center;
+  padding:20px;
+  font-size:12px;
+  opacity:.6;
+}
 
 /* TABLET */
 @media(min-width:600px){
@@ -113,8 +199,93 @@ footer{text-align:center;padding:20px;font-size:12px;opacity:.6}
 
 <section id="portfolio">
 
-<!-- (YOUR EXISTING CATEGORIES & IMAGES — UNCHANGED) -->
-<!-- I am NOT rewriting them here because you already have them correct -->
+<!-- CONCERTS -->
+<div id="concerts" class="category-section">
+<h2 class="section-title">Concert Photography <span>Live energy</span></h2>
+<div class="gallery">
+<div class="photo"><img src="Concerts/simar(1).jpg"></div>
+<div class="photo"><img src="Concerts/simar(3).jpg"></div>
+<div class="photo"><img src="Concerts/simar(4).jpg"></div>
+<div class="photo"><img src="Concerts/simar(6).jpg"></div>
+<div class="photo"><img src="Concerts/simar(7).jpg"></div>
+<div class="photo"><img src="Concerts/simar(8).jpg"></div>
+</div>
+</div>
+
+<!-- DANCE (ALL 13) -->
+<div id="dance" class="category-section">
+<h2 class="section-title">Dance Photography <span>Movement & expressions</span></h2>
+<div class="gallery">
+<div class="photo"><img src="Dance/DSC05520.jpeg"></div>
+<div class="photo"><img src="Dance/DSC_2988.jpeg"></div>
+<div class="photo"><img src="Dance/DSC_4503.jpeg"></div>
+<div class="photo"><img src="Dance/DSC_5197.jpeg"></div>
+<div class="photo"><img src="Dance/DSC_5222.jpeg"></div>
+<div class="photo"><img src="Dance/DSC_5223.jpeg"></div>
+<div class="photo"><img src="Dance/DSC_5344.jpeg"></div>
+<div class="photo"><img src="Dance/IMG_5721.jpeg"></div>
+<div class="photo"><img src="Dance/IMG_5831.jpeg"></div>
+<div class="photo"><img src="Dance/IMG_5904.jpeg"></div>
+<div class="photo"><img src="Dance/IMG_5981.jpeg"></div>
+<div class="photo"><img src="Dance/NU_03480.jpeg"></div>
+<div class="photo"><img src="Dance/NU_04650.jpeg"></div>
+</div>
+</div>
+
+<!-- DJ -->
+<div id="dj" class="category-section">
+<h2 class="section-title">DJ Photography <span>Nightlife</span></h2>
+<div class="gallery">
+<div class="photo"><img src="DJ/IMG_5126.jpeg"></div>
+<div class="photo"><img src="DJ/NU_02768.jpeg"></div>
+</div>
+</div>
+
+<!-- PHOTOSHOOT -->
+<div id="photoshoot" class="category-section">
+<h2 class="section-title">Photoshoots <span>Creative work</span></h2>
+<div class="gallery">
+<div class="photo"><img src="Photoshoot/DSC_0198.jpeg"></div>
+<div class="photo"><img src="Photoshoot/IMG_9004.jpeg"></div>
+<div class="photo"><img src="Photoshoot/IMG_9167.jpeg"></div>
+<div class="photo"><img src="Photoshoot/IMG_9170.jpeg"></div>
+<div class="photo"><img src="Photoshoot/IMG_9964.jpeg"></div>
+</div>
+</div>
+
+<!-- MUSIC -->
+<div id="music" class="category-section">
+<h2 class="section-title">Music Photography <span>Artists</span></h2>
+<div class="gallery">
+<div class="photo"><img src="Music/DSC_0008.jpeg"></div>
+<div class="photo"><img src="Music/DSC_0050.jpeg"></div>
+<div class="photo"><img src="Music/DSC_0102.jpeg"></div>
+<div class="photo"><img src="Music/DSC_0116.jpeg"></div>
+<div class="photo"><img src="Music/DSC_0177.jpeg"></div>
+<div class="photo"><img src="Music/DSC_0481.jpeg"></div>
+<div class="photo"><img src="Music/DSC_0808.jpeg"></div>
+<div class="photo"><img src="Music/NU_09497.jpeg"></div>
+<div class="photo"><img src="Music/NU_09831.jpeg"></div>
+<div class="photo"><img src="Music/NU_09832.jpeg"></div>
+<div class="photo"><img src="Music/_DSC0604.jpeg"></div>
+<div class="photo"><img src="Music/_DSC0627.jpeg"></div>
+<div class="photo"><img src="Music/_DSC0767.jpeg"></div>
+</div>
+</div>
+
+<!-- SPORTS (ALL 7) -->
+<div id="sports" class="category-section">
+<h2 class="section-title">Sports Photography <span>Action</span></h2>
+<div class="gallery">
+<div class="photo"><img src="Sports/DSC_0959.jpeg"></div>
+<div class="photo"><img src="Sports/DSC_0996.jpeg"></div>
+<div class="photo"><img src="Sports/IMG_0315.jpeg"></div>
+<div class="photo"><img src="Sports/IMG_0489.jpeg"></div>
+<div class="photo"><img src="Sports/IMG_0491.jpeg"></div>
+<div class="photo"><img src="Sports/IMG_0519.jpeg"></div>
+<div class="photo"><img src="Sports/IMG_2867.jpeg"></div>
+</div>
+</div>
 
 </section>
 
@@ -137,39 +308,22 @@ footer{text-align:center;padding:20px;font-size:12px;opacity:.6}
 
 <footer>© 2025 Simarpreet Singh</footer>
 
-<!-- LIGHTBOX HTML -->
-<div class="lightbox" id="lightbox" onclick="closeLightbox()">
-  <span>&times;</span>
-  <img id="lightbox-img">
-</div>
-
 <script>
 function showOnly(id){
-  document.querySelectorAll('.category-section').forEach(s=>s.style.display='none');
-  const el=document.getElementById(id);
-  el.style.display='block';
-  el.scrollIntoView({behavior:'smooth'});
+document.querySelectorAll('.category-section').forEach(s=>s.style.display='none');
+const el=document.getElementById(id);
+el.style.display='block';
+el.scrollIntoView({behavior:'smooth'});
 }
 function showAll(){
-  document.querySelectorAll('.category-section').forEach(s=>s.style.display='block');
-  document.getElementById('portfolio').scrollIntoView({behavior:'smooth'});
+document.querySelectorAll('.category-section').forEach(s=>s.style.display='block');
+document.getElementById('portfolio').scrollIntoView({behavior:'smooth'});
 }
 function sendWhatsApp(e){
-  e.preventDefault();
-  const f=e.target;
-  const msg=`Name: ${f.name.value}\nEmail: ${f.email.value}\n${f.message.value}`;
-  window.open(`https://wa.me/919690151550?text=${encodeURIComponent(msg)}`,'_blank');
-}
-
-/* LIGHTBOX LOGIC */
-document.querySelectorAll('.photo img').forEach(img=>{
-  img.addEventListener('click',()=>{
-    document.getElementById('lightbox-img').src = img.src;
-    document.getElementById('lightbox').style.display='flex';
-  });
-});
-function closeLightbox(){
-  document.getElementById('lightbox').style.display='none';
+e.preventDefault();
+const f=e.target;
+const msg=`Name: ${f.name.value}\nEmail: ${f.email.value}\n${f.message.value}`;
+window.open(`https://wa.me/919690151550?text=${encodeURIComponent(msg)}`,'_blank');
 }
 </script>
 
