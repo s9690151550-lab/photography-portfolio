@@ -312,124 +312,68 @@
 </header>
 
 <div class="filters">
-  <button class="active" data-filter="all">All</button>
-  <button data-filter="Concerts">Concerts</button>
-  <button data-filter="Dance">Dance</button>
-  <button data-filter="DJ">DJ</button>
-  <button data-filter="Photoshoot">Photoshoot</button>
-  <button data-filter="Music">Music</button>
-  <button data-filter="Sports">Sports</button>
+  <button onclick="filterAndScroll('all','portfolio')">All</button>
+  <button onclick="filterAndScroll('Concerts','concerts')">Concerts</button>
+  <button onclick="filterAndScroll('Dance','dance')">Dance</button>
+  <button onclick="filterAndScroll('DJ','dj')">DJ</button>
+  <button onclick="filterAndScroll('Photoshoot','photoshoot')">Photoshoot</button>
+  <button onclick="filterAndScroll('Music','music')">Music</button>
+  <button onclick="filterAndScroll('Sports','sports')">Sports</button>
 </div>
 
 
 <section id="portfolio">
 
-  <!-- ===== CONCERTS ===== -->
-  <div class="category-header concerts">
-  <h2>Concert Photography</h2>
-  <p>Capturing live performances, raw energy, artists and crowd moments.</p>
-</div>
-  <div class="gallery concerts">
-    <div class="photo"><img src="Concerts/simar(1).jpg"></div>
-    <div class="photo"><img src="Concerts/simar(3).jpg"></div>
-    <div class="photo"><img src="Concerts/simar(4).jpg"></div>
-    <div class="photo"><img src="Concerts/simar(6).jpg"></div>
-    <div class="photo"><img src="Concerts/simar(7).jpg"></div>
-    <div class="photo"><img src="Concerts/simar(8).jpg"></div>
-  </div>
+  <!-- CONCERTS -->
+  <section id="concerts" class="category-section">
+    <h2 class="section-title">Concert Photography</h2>
+    <div class="gallery Concerts">
+      <!-- your concert images -->
+    </div>
+  </section>
 
-  <!-- ===== DANCE ===== -->
-  <div class="category-header dance">
-  <h2>Dance Photography</h2>
-  <p>Freeze-frame movement, expressions, rhythm and stage presence.</p>
-</div>
-  <div class="gallery dance">
-    <div class="photo"><img src="Dance/DSC05520.jpeg"></div>
-    <div class="photo"><img src="Dance/DSC_2988.jpeg"></div>
-    <div class="photo"><img src="Dance/DSC_4503.jpeg"></div>
-    <div class="photo"><img src="Dance/DSC_5197.jpeg"></div>
-    <div class="photo"><img src="Dance/DSC_5222.jpeg"></div>
-    <div class="photo"><img src="Dance/DSC_5223.jpeg"></div>
-    <div class="photo"><img src="Dance/DSC_5344.jpeg"></div>
-    <div class="photo"><img src="Dance/IMG_5721.jpeg"></div>
-    <div class="photo"><img src="Dance/IMG_5831.jpeg"></div>
-    <div class="photo"><img src="Dance/IMG_5904.jpeg"></div>
-    <div class="photo"><img src="Dance/IMG_5981.jpeg"></div>
-    <div class="photo"><img src="Dance/NU_03480.jpeg"></div>
-    <div class="photo"><img src="Dance/NU_04650.jpeg"></div>
-  </div>
+  <!-- DANCE -->
+  <section id="dance" class="category-section">
+    <h2 class="section-title">Dance Photography</h2>
+    <div class="gallery Dance">
+      <!-- your dance images -->
+    </div>
+  </section>
 
-  <!-- ===== DJ ===== -->
-  <div class="category-header dj">
-  <h2>DJ & Club Events</h2>
-  <p>Nightlife, DJs, lighting, crowd energy and live mixes.</p>
-</div>
-  <div class="gallery dj">
-    <div class="photo"><img src="DJ/IMG_5126.jpeg"></div>
-    <div class="photo"><img src="DJ/NU_02768.jpeg"></div>
-  </div>
+  <!-- DJ -->
+  <section id="dj" class="category-section">
+    <h2 class="section-title">DJ Photography</h2>
+    <div class="gallery DJ">
+      <!-- your DJ images -->
+    </div>
+  </section>
 
-  <!-- ===== PHOTOSHOOT ===== -->
-  <div class="category-header photoshoot">
-  <h2>Photoshoots</h2>
-  <p>Portraits, creative shoots, lifestyle and personal branding.</p>
-</div>
-  <div class="gallery photoshoot">
-    <div class="photo"><img src="Photoshoot/DSC_0198.jpeg"></div>
-    <div class="photo"><img src="Photoshoot/IMG_9004.jpeg"></div>
-    <div class="photo"><img src="Photoshoot/IMG_9167.jpeg"></div>
-    <div class="photo"><img src="Photoshoot/IMG_9170.jpeg"></div>
-    <div class="photo"><img src="Photoshoot/IMG_9964.jpeg"></div>
-  </div>
+  <!-- PHOTOSHOOT -->
+  <section id="photoshoot" class="category-section">
+    <h2 class="section-title">Photoshoots</h2>
+    <div class="gallery Photoshoot">
+      <!-- your photoshoot images -->
+    </div>
+  </section>
 
-  <!-- ===== MUSIC ===== -->
-  <div class="category-header music">
-  <h2>Music Photography</h2>
-  <p>Artists, instruments, rehearsals and behind-the-scenes moments.</p>
-</div>
-  <div class="gallery music">
-    <div class="photo"><img src="Music/DSC_0008.jpeg"></div>
-    <div class="photo"><img src="Music/DSC_0050.jpeg"></div>
-    <div class="photo"><img src="Music/DSC_0102.jpeg"></div>
-    <div class="photo"><img src="Music/DSC_0116.jpeg"></div>
-    <div class="photo"><img src="Music/DSC_0177.jpeg"></div>
-    <div class="photo"><img src="Music/DSC_0481.jpeg"></div>
-    <div class="photo"><img src="Music/DSC_0808.jpeg"></div>
-    <div class="photo"><img src="Music/NU_09497.jpeg"></div>
-    <div class="photo"><img src="Music/NU_09831.jpeg"></div>
-    <div class="photo"><img src="Music/NU_09832.jpeg"></div>
-    <div class="photo"><img src="Music/_DSC0604.jpeg"></div>
-    <div class="photo"><img src="Music/_DSC0627.jpeg"></div>
-    <div class="photo"><img src="Music/_DSC0767.jpeg"></div>
-  </div>
+  <!-- MUSIC -->
+  <section id="music" class="category-section">
+    <h2 class="section-title">Music Photography</h2>
+    <div class="gallery Music">
+      <!-- your music images -->
+    </div>
+  </section>
 
-  <!-- ===== SPORTS ===== -->
-  <div class="category-header sports">
-  <h2>Sports Photography</h2>
-  <p>Action, intensity, passion and decisive sports moments.</p>
-</div>
-  <div class="gallery sports">
-    <div class="photo"><img src="Sports/DSC_0959.jpeg"></div>
-    <div class="photo"><img src="Sports/DSC_0996.jpeg"></div>
-    <div class="photo"><img src="Sports/IMG_0315.jpeg"></div>
-    <div class="photo"><img src="Sports/IMG_0489.jpeg"></div>
-    <div class="photo"><img src="Sports/IMG_0491.jpeg"></div>
-    <div class="photo"><img src="Sports/IMG_0519.jpeg"></div>
-    <div class="photo"><img src="Sports/IMG_2867.jpeg"></div>
-  </div>
-
-  <!-- ===== MISC ===== -->
-  <div class="category-header misc">
-  <h2>Miscellaneous</h2>
-  <p>Stories, candid moments and experimental frames.</p>
-</div>
-  <div class="gallery misc">
-    <div class="photo"><img src="Miscellaneous/IMG_6073.JPG"></div>
-    <div class="photo"><img src="Miscellaneous/IMG_6405.jpeg"></div>
-    <div class="photo"><img src="Miscellaneous/IMG_6685.jpeg"></div>
-  </div>
+  <!-- SPORTS -->
+  <section id="sports" class="category-section">
+    <h2 class="section-title">Sports Photography</h2>
+    <div class="gallery Sports">
+      <!-- your sports images -->
+    </div>
+  </section>
 
 </section>
+
 
 <section id="contact">
   <h2 class="section-title">
@@ -465,29 +409,38 @@
 </footer>
 
 <script>
-const filterButtons = document.querySelectorAll(".filters button");
-const sections = document.querySelectorAll(".gallery-section");
+function filterAndScroll(category, targetId) {
+  const galleries = document.querySelectorAll('.gallery');
+  const sections = document.querySelectorAll('.category-section');
 
-filterButtons.forEach(btn => {
-  btn.addEventListener("click", () => {
-    // active button
-    filterButtons.forEach(b => b.classList.remove("active"));
-    btn.classList.add("active");
-
-    const filter = btn.getAttribute("data-filter");
-
-    sections.forEach(section => {
-      const category = section.getAttribute("data-category");
-
-      if (filter === "all" || category === filter) {
-        section.style.display = "block";
-      } else {
-        section.style.display = "none";
-      }
-    });
+  // Filter galleries
+  galleries.forEach(gallery => {
+    if (category === 'all' || gallery.classList.contains(category)) {
+      gallery.style.display = 'grid';
+    } else {
+      gallery.style.display = 'none';
+    }
   });
-});
+
+  // Hide non-selected section titles
+  sections.forEach(section => {
+    if (category === 'all' || section.id === targetId) {
+      section.style.display = 'block';
+    } else {
+      section.style.display = 'none';
+    }
+  });
+
+  // Scroll smoothly
+  const target = document.getElementById(targetId);
+  if (target) {
+    setTimeout(() => {
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 100);
+  }
+}
 </script>
+
 
 
 
@@ -495,6 +448,7 @@ filterButtons.forEach(btn => {
 
 </body>
 </html>
+
 
 
 
