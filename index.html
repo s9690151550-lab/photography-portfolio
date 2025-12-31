@@ -5,16 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <title>Simarpreet Singh | Photographer</title>
-<meta name="description" content="Professional photographer for concerts, dance, DJ, photoshoots, music and sports.">
+<meta name="description" content="Professional photographer for concerts, dance, DJ events, photoshoots, music and sports.">
 <meta name="author" content="Simarpreet Singh">
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
-/* ===== RESET ===== */
 *{margin:0;padding:0;box-sizing:border-box}
-
-/* ===== BASE ===== */
 body{
   font-family:Poppins,sans-serif;
   background:#0b0b0b;
@@ -22,7 +19,7 @@ body{
   line-height:1.6;
 }
 
-/* ===== NAV ===== */
+/* NAV */
 nav{
   position:sticky;
   top:0;
@@ -40,7 +37,7 @@ nav a{
   font-size:14px;
 }
 
-/* ===== HEADER ===== */
+/* HEADER */
 header{
   text-align:center;
   padding:70px 16px 40px;
@@ -55,13 +52,12 @@ header p{
   margin-top:8px;
 }
 
-/* ===== FILTER BUTTONS ===== */
+/* FILTERS */
 .filters{
   display:flex;
   gap:10px;
   overflow-x:auto;
   padding:12px;
-  margin:0 auto 20px;
   background:#111;
 }
 .filters button{
@@ -75,18 +71,15 @@ header p{
   cursor:pointer;
 }
 
-/* ===== SECTIONS ===== */
+/* SECTIONS */
 section{
   padding:40px 16px;
 }
-
-/* ===== CATEGORY ===== */
 .category-section{
   margin-bottom:60px;
 }
 .section-title{
   font-size:22px;
-  margin-bottom:6px;
 }
 .section-title span{
   display:block;
@@ -94,7 +87,7 @@ section{
   opacity:.7;
 }
 
-/* ===== GALLERY ===== */
+/* GALLERY */
 .gallery{
   display:grid;
   grid-template-columns:repeat(2,1fr);
@@ -106,13 +99,10 @@ section{
 }
 .photo img{
   width:100%;
-  height:100%;
   aspect-ratio:3/4;
   object-fit:cover;
   border-radius:10px;
 }
-
-/* ===== WATERMARK ===== */
 .photo::after{
   content:"© Simarpreet Singh";
   position:absolute;
@@ -124,10 +114,8 @@ section{
   border-radius:4px;
 }
 
-/* ===== CONTACT ===== */
-#contact{
-  text-align:center;
-}
+/* CONTACT */
+#contact{text-align:center}
 .contact-buttons{
   display:flex;
   flex-direction:column;
@@ -143,14 +131,12 @@ section{
   font-size:14px;
 }
 .contact-form{
-  max-width:100%;
   margin-top:20px;
   display:grid;
   gap:12px;
 }
 .contact-form input,
 .contact-form textarea{
-  width:100%;
   padding:12px;
   border-radius:8px;
   border:none;
@@ -164,7 +150,7 @@ section{
   font-weight:600;
 }
 
-/* ===== FOOTER ===== */
+/* FOOTER */
 footer{
   text-align:center;
   padding:20px;
@@ -172,15 +158,13 @@ footer{
   opacity:.6;
 }
 
-/* ===== TABLET ===== */
+/* TABLET */
 @media(min-width:600px){
   .gallery{grid-template-columns:repeat(3,1fr)}
-  header h1{font-size:36px}
 }
 
-/* ===== DESKTOP ===== */
+/* DESKTOP */
 @media(min-width:900px){
-  nav{padding:18px 40px}
   section{padding:60px 40px}
   .gallery{grid-template-columns:repeat(4,1fr);gap:16px}
   header h1{font-size:42px}
@@ -211,14 +195,13 @@ footer{
 <button onclick="showOnly('photoshoot')">Photoshoot</button>
 <button onclick="showOnly('music')">Music</button>
 <button onclick="showOnly('sports')">Sports</button>
-<button onclick="showOnly('misc')">Misc</button>
 </div>
 
 <section id="portfolio">
 
 <!-- CONCERTS -->
 <div id="concerts" class="category-section">
-<h2 class="section-title">Concert Photography <span>Live energy & performances</span></h2>
+<h2 class="section-title">Concert Photography <span>Live energy</span></h2>
 <div class="gallery">
 <div class="photo"><img src="Concerts/simar(1).jpg"></div>
 <div class="photo"><img src="Concerts/simar(3).jpg"></div>
@@ -229,7 +212,7 @@ footer{
 </div>
 </div>
 
-<!-- DANCE -->
+<!-- DANCE (ALL 13) -->
 <div id="dance" class="category-section">
 <h2 class="section-title">Dance Photography <span>Movement & expressions</span></h2>
 <div class="gallery">
@@ -240,12 +223,18 @@ footer{
 <div class="photo"><img src="Dance/DSC_5222.jpeg"></div>
 <div class="photo"><img src="Dance/DSC_5223.jpeg"></div>
 <div class="photo"><img src="Dance/DSC_5344.jpeg"></div>
+<div class="photo"><img src="Dance/IMG_5721.jpeg"></div>
+<div class="photo"><img src="Dance/IMG_5831.jpeg"></div>
+<div class="photo"><img src="Dance/IMG_5904.jpeg"></div>
+<div class="photo"><img src="Dance/IMG_5981.jpeg"></div>
+<div class="photo"><img src="Dance/NU_03480.jpeg"></div>
+<div class="photo"><img src="Dance/NU_04650.jpeg"></div>
 </div>
 </div>
 
 <!-- DJ -->
 <div id="dj" class="category-section">
-<h2 class="section-title">DJ Photography <span>Nightlife & clubs</span></h2>
+<h2 class="section-title">DJ Photography <span>Nightlife</span></h2>
 <div class="gallery">
 <div class="photo"><img src="DJ/IMG_5126.jpeg"></div>
 <div class="photo"><img src="DJ/NU_02768.jpeg"></div>
@@ -254,7 +243,7 @@ footer{
 
 <!-- PHOTOSHOOT -->
 <div id="photoshoot" class="category-section">
-<h2 class="section-title">Photoshoots <span>Portraits & creative work</span></h2>
+<h2 class="section-title">Photoshoots <span>Creative work</span></h2>
 <div class="gallery">
 <div class="photo"><img src="Photoshoot/DSC_0198.jpeg"></div>
 <div class="photo"><img src="Photoshoot/IMG_9004.jpeg"></div>
@@ -266,33 +255,35 @@ footer{
 
 <!-- MUSIC -->
 <div id="music" class="category-section">
-<h2 class="section-title">Music Photography <span>Artists & instruments</span></h2>
+<h2 class="section-title">Music Photography <span>Artists</span></h2>
 <div class="gallery">
 <div class="photo"><img src="Music/DSC_0008.jpeg"></div>
 <div class="photo"><img src="Music/DSC_0050.jpeg"></div>
 <div class="photo"><img src="Music/DSC_0102.jpeg"></div>
 <div class="photo"><img src="Music/DSC_0116.jpeg"></div>
 <div class="photo"><img src="Music/DSC_0177.jpeg"></div>
+<div class="photo"><img src="Music/DSC_0481.jpeg"></div>
+<div class="photo"><img src="Music/DSC_0808.jpeg"></div>
+<div class="photo"><img src="Music/NU_09497.jpeg"></div>
+<div class="photo"><img src="Music/NU_09831.jpeg"></div>
+<div class="photo"><img src="Music/NU_09832.jpeg"></div>
+<div class="photo"><img src="Music/_DSC0604.jpeg"></div>
+<div class="photo"><img src="Music/_DSC0627.jpeg"></div>
+<div class="photo"><img src="Music/_DSC0767.jpeg"></div>
 </div>
 </div>
 
-<!-- SPORTS -->
+<!-- SPORTS (ALL 7) -->
 <div id="sports" class="category-section">
-<h2 class="section-title">Sports Photography <span>Action & intensity</span></h2>
+<h2 class="section-title">Sports Photography <span>Action</span></h2>
 <div class="gallery">
 <div class="photo"><img src="Sports/DSC_0959.jpeg"></div>
 <div class="photo"><img src="Sports/DSC_0996.jpeg"></div>
 <div class="photo"><img src="Sports/IMG_0315.jpeg"></div>
-</div>
-</div>
-
-<!-- MISC -->
-<div id="misc" class="category-section">
-<h2 class="section-title">Miscellaneous <span>Creative moments</span></h2>
-<div class="gallery">
-<div class="photo"><img src="Miscellaneous/IMG_6073.JPG"></div>
-<div class="photo"><img src="Miscellaneous/IMG_6405.jpeg"></div>
-<div class="photo"><img src="Miscellaneous/IMG_6685.jpeg"></div>
+<div class="photo"><img src="Sports/IMG_0489.jpeg"></div>
+<div class="photo"><img src="Sports/IMG_0491.jpeg"></div>
+<div class="photo"><img src="Sports/IMG_0519.jpeg"></div>
+<div class="photo"><img src="Sports/IMG_2867.jpeg"></div>
 </div>
 </div>
 
