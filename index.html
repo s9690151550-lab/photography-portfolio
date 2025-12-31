@@ -312,14 +312,13 @@
 </header>
 
 <div class="filters">
-  <button class="active" onclick="filterGallery('all')">All</button>
-  <button onclick="filterGallery('concerts')">Concerts</button>
-  <button onclick="filterGallery('dance')">Dance</button>
-  <button onclick="filterGallery('dj')">DJ</button>
-  <button onclick="filterGallery('photoshoot')">Photoshoot</button>
-  <button onclick="filterGallery('music')">Music</button>
-  <button onclick="filterGallery('sports')">Sports</button>
-  <button onclick="filterGallery('misc')">Misc</button>
+  <button class="active" onclick="filterGallery('all', this)">All</button>
+  <button onclick="filterGallery('concerts', this)">Concerts</button>
+  <button onclick="filterGallery('dance', this)">Dance</button>
+  <button onclick="filterGallery('dj', this)">DJ</button>
+  <button onclick="filterGallery('photoshoot', this)">Photoshoot</button>
+  <button onclick="filterGallery('music', this)">Music</button>
+  <button onclick="filterGallery('sports', this)">Sports</button>
 </div>
 
 <section id="portfolio">
@@ -465,67 +464,51 @@
 </footer>
 
 <script>
-function filterGallery(category) {
+function filterGallery(category, btn) {
 
-  // Active button state
-  document.querySelectorAll('.filters button').forEach(btn => {
-    btn.classList.remove('active');
+  // Active button
+  document.querySelectorAll('.filters button').forEach(b => {
+    b.classList.remove('active');
   });
-  event.target.classList.add('active');
+  btn.classList.add('active');
 
-  let targetHeader = null;
-
-  // Handle category headers
-  document.querySelectorAll('.category-header').forEach(header => {
-    if (category === 'all' || header.classList.contains(category)) {
-      header.classList.remove('hidden');
-      header.classList.add('visible');
-      header.style.display = 'block';
-
-      // FIRST matching header = scroll target
-      if (!targetHeader && category !== 'all') {
-        targetHeader = header;
-      }
-    } else {
-      header.classList.remove('visible');
-      header.classList.add('hidden');
-      setTimeout(() => {
-        header.style.display = 'none';
-      }, 300);
-    }
-  });
-
-  // Handle galleries
+  // Show / hide galleries
   document.querySelectorAll('.gallery').forEach(gallery => {
-    if (category === 'all' || gallery.classList.contains(category)) {
-      gallery.classList.remove('hidden');
-      gallery.classList.add('visible');
-      gallery.style.display = 'grid';
-    } else {
-      gallery.classList.remove('visible');
-      gallery.classList.add('hidden');
-      setTimeout(() => {
-        gallery.style.display = 'none';
-      }, 300);
-    }
+    gallery.style.display =
+      category === 'all' || gallery.classList.contains(category)
+      ? 'grid'
+      : 'none';
   });
 
-  // Scroll ONLY to the category header
-  if (targetHeader) {
-    const yOffset = -80; // offset for sticky header if any
-    const y = targetHeader.getBoundingClientRect().top + window.pageYOffset + yOffset;
+  // Show / hide headers
+  document.querySelectorAll('.category-header').forEach(header => {
+    header.style.display =
+      category === 'all' || header.classList.contains(category)
+      ? 'block'
+      : 'none';
+  });
 
-    window.scrollTo({
-      top: y,
-      behavior: 'smooth'
-    });
+  // Scroll ONLY to the header (never photos)
+  if (category !== 'all') {
+    const header = document.getElementById(category);
+    if (header) {
+      const offset = 90; // adjust if you have sticky header
+      const top = header.getBoundingClientRect().top + window.scrollY - offset;
+
+      window.scrollTo({
+        top,
+        behavior: 'smooth'
+      });
+    }
   }
 }
 </script>
 
 
+
 </body>
 </html>
+
 
 
 
