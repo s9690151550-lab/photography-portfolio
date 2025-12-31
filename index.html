@@ -467,64 +467,66 @@
 <script>
 function filterGallery(category) {
 
-  // Active button
+  // Active button state
   document.querySelectorAll('.filters button').forEach(btn => {
     btn.classList.remove('active');
   });
   event.target.classList.add('active');
 
-  let firstVisibleElement = null;
+  let targetHeader = null;
 
-  // Galleries
-  document.querySelectorAll('.gallery').forEach(gallery => {
-    if (category === 'all' || gallery.classList.contains(category)) {
-      gallery.classList.remove('hidden');
-      gallery.classList.add('visible');
-      gallery.style.display = 'grid';
-
-      if (!firstVisibleElement) {
-        firstVisibleElement = gallery;
-      }
-    } else {
-      gallery.classList.remove('visible');
-      gallery.classList.add('hidden');
-      setTimeout(() => {
-        gallery.style.display = 'none';
-      }, 350);
-    }
-  });
-
-  // Category headers (name + description)
+  // Handle category headers
   document.querySelectorAll('.category-header').forEach(header => {
     if (category === 'all' || header.classList.contains(category)) {
       header.classList.remove('hidden');
       header.classList.add('visible');
       header.style.display = 'block';
 
-      if (!firstVisibleElement) {
-        firstVisibleElement = header;
+      // FIRST matching header = scroll target
+      if (!targetHeader && category !== 'all') {
+        targetHeader = header;
       }
     } else {
       header.classList.remove('visible');
       header.classList.add('hidden');
       setTimeout(() => {
         header.style.display = 'none';
-      }, 350);
+      }, 300);
     }
   });
 
-  // Auto scroll to first visible category
-  if (firstVisibleElement) {
-    firstVisibleElement.scrollIntoView({
-      behavior: 'smooth',
-      block: 'start'
+  // Handle galleries
+  document.querySelectorAll('.gallery').forEach(gallery => {
+    if (category === 'all' || gallery.classList.contains(category)) {
+      gallery.classList.remove('hidden');
+      gallery.classList.add('visible');
+      gallery.style.display = 'grid';
+    } else {
+      gallery.classList.remove('visible');
+      gallery.classList.add('hidden');
+      setTimeout(() => {
+        gallery.style.display = 'none';
+      }, 300);
+    }
+  });
+
+  // Scroll ONLY to the category header
+  if (targetHeader) {
+    const yOffset = -80; // offset for sticky header if any
+    const y = targetHeader.getBoundingClientRect().top + window.pageYOffset + yOffset;
+
+    window.scrollTo({
+      top: y,
+      behavior: 'smooth'
     });
   }
 }
 </script>
 
+
 </body>
 </html>
+
 
 
 
