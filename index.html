@@ -312,14 +312,15 @@
 </header>
 
 <div class="filters">
-  <button class="active" onclick="filterGallery('all', this)">All</button>
-  <button onclick="filterGallery('concerts', this)">Concerts</button>
-  <button onclick="filterGallery('dance', this)">Dance</button>
-  <button onclick="filterGallery('dj', this)">DJ</button>
-  <button onclick="filterGallery('photoshoot', this)">Photoshoot</button>
-  <button onclick="filterGallery('music', this)">Music</button>
-  <button onclick="filterGallery('sports', this)">Sports</button>
+  <button class="active" data-filter="all">All</button>
+  <button data-filter="Concerts">Concerts</button>
+  <button data-filter="Dance">Dance</button>
+  <button data-filter="DJ">DJ</button>
+  <button data-filter="Photoshoot">Photoshoot</button>
+  <button data-filter="Music">Music</button>
+  <button data-filter="Sports">Sports</button>
 </div>
+
 
 <section id="portfolio">
 
@@ -464,41 +465,37 @@
 </footer>
 
 <script>
-function sendWhatsApp(e) {
-  e.preventDefault();
+const filterButtons = document.querySelectorAll(".filters button");
+const sections = document.querySelectorAll(".gallery-section");
 
-  const form = e.target;
+filterButtons.forEach(btn => {
+  btn.addEventListener("click", () => {
+    // active button
+    filterButtons.forEach(b => b.classList.remove("active"));
+    btn.classList.add("active");
 
-  const name = form.name.value.trim();
-  const email = form.email.value.trim();
-  const requirement = form.requirement.value.trim();
-  const message = form.message.value.trim();
+    const filter = btn.getAttribute("data-filter");
 
-  const whatsappNumber = "919690151550"; // <-- replace with your number (country code + number)
+    sections.forEach(section => {
+      const category = section.getAttribute("data-category");
 
-  const whatsappMessage =
-`Hello Simarpreet 👋
-
-Name: ${name}
-Email: ${email}
-Requirement: ${requirement}
-Message: ${message}
-
-Sent via your website.`;
-
-  const encodedMessage = encodeURIComponent(whatsappMessage);
-
-  const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
-
-  window.open(whatsappURL, "_blank");
-}
+      if (filter === "all" || category === filter) {
+        section.style.display = "block";
+      } else {
+        section.style.display = "none";
+      }
+    });
+  });
+});
 </script>
+
 
 
 
 
 </body>
 </html>
+
 
 
 
