@@ -168,6 +168,37 @@ section h2 {
       header h1 { font-size: 2.5rem; }
       section { padding: 60px 5%; }
     }
+    /* ===== PHOTO WRAPPER ===== */
+.photo {
+  position: relative;
+  overflow: visible;
+}
+
+/* IMAGE */
+.photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ===== WATERMARK ===== */
+.photo::after {
+  content: "© Simarpreet Singh";
+  position: absolute;
+  bottom: 10px;
+  right: 12px;
+
+  background: rgba(0, 0, 0, 0.45);
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 999px;
+
+  z-index: 999;
+  pointer-events: none;
+}
+
   </style>
 </head>
 <body>
@@ -339,6 +370,7 @@ function filterGallery(category, btn) {
 
 </body>
 </html>
+
 
 
 
