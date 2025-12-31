@@ -444,7 +444,7 @@
   </div>
 
   <!-- Contact Form -->
-  <form class="contact-form" action="https://formspree.io/f/xeeojqyk" method="POST">
+  <form class="contact-form" onsubmit="sendWhatsApp(event)">
     <input type="text" name="name" placeholder="Your Name" required>
 
     <input type="email" name="email" placeholder="Your Email" required>
@@ -464,50 +464,42 @@
 </footer>
 
 <script>
-function filterGallery(category, btn) {
+function sendWhatsApp(e) {
+  e.preventDefault();
 
-  // Active button
-  document.querySelectorAll('.filters button').forEach(b => {
-    b.classList.remove('active');
-  });
-  btn.classList.add('active');
+  const form = e.target;
 
-  // Show / hide galleries
-  document.querySelectorAll('.gallery').forEach(gallery => {
-    gallery.style.display =
-      category === 'all' || gallery.classList.contains(category)
-      ? 'grid'
-      : 'none';
-  });
+  const name = form.name.value.trim();
+  const email = form.email.value.trim();
+  const requirement = form.requirement.value.trim();
+  const message = form.message.value.trim();
 
-  // Show / hide headers
-  document.querySelectorAll('.category-header').forEach(header => {
-    header.style.display =
-      category === 'all' || header.classList.contains(category)
-      ? 'block'
-      : 'none';
-  });
+  const whatsappNumber = "919690151550"; // <-- replace with your number (country code + number)
 
-  // Scroll ONLY to the header (never photos)
-  if (category !== 'all') {
-    const header = document.getElementById(category);
-    if (header) {
-      const offset = 90; // adjust if you have sticky header
-      const top = header.getBoundingClientRect().top + window.scrollY - offset;
+  const whatsappMessage =
+`Hello Simarpreet 👋
 
-      window.scrollTo({
-        top,
-        behavior: 'smooth'
-      });
-    }
-  }
+Name: ${name}
+Email: ${email}
+Requirement: ${requirement}
+Message: ${message}
+
+Sent via your website.`;
+
+  const encodedMessage = encodeURIComponent(whatsappMessage);
+
+  const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+
+  window.open(whatsappURL, "_blank");
 }
 </script>
 
 
 
+
 </body>
 </html>
+
 
 
 
