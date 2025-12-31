@@ -316,6 +316,22 @@
   border-radius: 12px;
   display: block;
 }
+.category-section {
+  display: block;
+  margin-bottom: 90px;
+}
+
+.section-title {
+  font-size: 30px;
+  margin-bottom: 24px;
+}
+
+.section-title span {
+  display: block;
+  font-size: 14px;
+  opacity: 0.7;
+  margin-top: 6px;
+}
 
   </style>
 </head>
@@ -336,139 +352,86 @@
 </header>
 
 <div class="filters">
-  <button onclick="filterAndScroll('all','portfolio')">All</button>
-  <button onclick="filterAndScroll('Concerts','concerts')">Concerts</button>
-  <button onclick="filterAndScroll('Dance','dance')">Dance</button>
-  <button onclick="filterAndScroll('DJ','dj')">DJ</button>
-  <button onclick="filterAndScroll('Photoshoot','photoshoot')">Photoshoot</button>
-  <button onclick="filterAndScroll('Music','music')">Music</button>
-  <button onclick="filterAndScroll('Sports','sports')">Sports</button>
+  <button onclick="showAll()">All</button>
+  <button onclick="showCategory('concerts')">Concerts</button>
+  <button onclick="showCategory('dance')">Dance</button>
+  <button onclick="showCategory('dj')">DJ</button>
+  <button onclick="showCategory('photoshoot')">Photoshoot</button>
+  <button onclick="showCategory('music')">Music</button>
+  <button onclick="showCategory('sports')">Sports</button>
 </div>
+
 
 
 <section id="portfolio">
 
   <!-- CONCERTS -->
-  <section id="concerts" class="category-section">
-    <div class="category-header">
-      <h2>Concert Photography</h2>
-      <p>Live performances, artists, stage energy & crowd moments.</p>
+  <div id="concerts" class="category-section">
+    <h2 class="section-title">
+      Concert Photography
+      <span>Live shows, artists & crowd energy</span>
+    </h2>
+    <div class="gallery Concerts">
+      <!-- PASTE ALL YOUR CONCERT <img> TAGS HERE -->
     </div>
-    <div class="gallery">
-      <img src="Concerts/simar(1).jpg" loading="lazy">
-      <img src="Concerts/simar(3).jpg" loading="lazy">
-      <img src="Concerts/simar(4).jpg" loading="lazy">
-      <img src="Concerts/simar(6).jpg" loading="lazy">
-      <img src="Concerts/simar(7).jpg" loading="lazy">
-      <img src="Concerts/simar(8).jpg" loading="lazy">
-    </div>
-  </section>
+  </div>
 
   <!-- DANCE -->
-  <section id="dance" class="category-section">
-    <div class="category-header">
-      <h2>Dance Photography</h2>
-      <p>Movement, expressions, rhythm and performance frames.</p>
+  <div id="dance" class="category-section">
+    <h2 class="section-title">
+      Dance Photography
+      <span>Movement, expressions & stage performance</span>
+    </h2>
+    <div class="gallery Dance">
+      <!-- PASTE ALL YOUR DANCE <img> TAGS HERE -->
     </div>
-    <div class="gallery">
-      <img src="Dance/DSC05520.jpeg" loading="lazy">
-      <img src="Dance/DSC_2988.jpeg" loading="lazy">
-      <img src="Dance/DSC_4503.jpeg" loading="lazy">
-      <img src="Dance/DSC_5197.jpeg" loading="lazy">
-      <img src="Dance/DSC_5222.jpeg" loading="lazy">
-      <img src="Dance/DSC_5223.jpeg" loading="lazy">
-      <img src="Dance/DSC_5344.jpeg" loading="lazy">
-      <img src="Dance/IMG_5721.jpeg" loading="lazy">
-      <img src="Dance/IMG_5831.jpeg" loading="lazy">
-      <img src="Dance/IMG_5904.jpeg" loading="lazy">
-      <img src="Dance/IMG_5981.jpeg" loading="lazy">
-      <img src="Dance/NU_03480.jpeg" loading="lazy">
-      <img src="Dance/NU_04650.jpeg" loading="lazy">
-    </div>
-  </section>
+  </div>
 
   <!-- DJ -->
-  <section id="dj" class="category-section">
-    <div class="category-header">
-      <h2>DJ Photography</h2>
-      <p>Club vibes, DJ performances, lights & crowd energy.</p>
+  <div id="dj" class="category-section">
+    <h2 class="section-title">
+      DJ Photography
+      <span>Club nights, DJs & nightlife vibes</span>
+    </h2>
+    <div class="gallery DJ">
+      <!-- PASTE ALL YOUR DJ <img> TAGS HERE -->
     </div>
-    <div class="gallery">
-      <img src="DJ/IMG_5126.jpeg" loading="lazy">
-      <img src="DJ/NU_02768.jpeg" loading="lazy">
-    </div>
-  </section>
+  </div>
 
   <!-- PHOTOSHOOT -->
-  <section id="photoshoot" class="category-section">
-    <div class="category-header">
-      <h2>Photoshoots</h2>
-      <p>Portraits, creative shoots & styled photography.</p>
+  <div id="photoshoot" class="category-section">
+    <h2 class="section-title">
+      Photoshoots
+      <span>Portraits, fashion & creative shoots</span>
+    </h2>
+    <div class="gallery Photoshoot">
+      <!-- PASTE ALL YOUR PHOTOSHOOT <img> TAGS HERE -->
     </div>
-    <div class="gallery">
-      <img src="Photoshoot/DSC_0198.jpeg" loading="lazy">
-      <img src="Photoshoot/IMG_9004.jpeg" loading="lazy">
-      <img src="Photoshoot/IMG_9167.jpeg" loading="lazy">
-      <img src="Photoshoot/IMG_9170.jpeg" loading="lazy">
-      <img src="Photoshoot/IMG_9964.jpeg" loading="lazy">
-    </div>
-  </section>
+  </div>
 
   <!-- MUSIC -->
-  <section id="music" class="category-section">
-    <div class="category-header">
-      <h2>Music Photography</h2>
-      <p>Musicians, instruments, studios & live sessions.</p>
+  <div id="music" class="category-section">
+    <h2 class="section-title">
+      Music Photography
+      <span>Bands, instruments & studio moments</span>
+    </h2>
+    <div class="gallery Music">
+      <!-- PASTE ALL YOUR MUSIC <img> TAGS HERE -->
     </div>
-    <div class="gallery">
-      <img src="Music/DSC_0008.jpeg" loading="lazy">
-      <img src="Music/DSC_0050.jpeg" loading="lazy">
-      <img src="Music/DSC_0102.jpeg" loading="lazy">
-      <img src="Music/DSC_0116.jpeg" loading="lazy">
-      <img src="Music/DSC_0177.jpeg" loading="lazy">
-      <img src="Music/DSC_0481.jpeg" loading="lazy">
-      <img src="Music/DSC_0808.jpeg" loading="lazy">
-      <img src="Music/NU_09497.jpeg" loading="lazy">
-      <img src="Music/NU_09831.jpeg" loading="lazy">
-      <img src="Music/NU_09832.jpeg" loading="lazy">
-      <img src="Music/_DSC0604.jpeg" loading="lazy">
-      <img src="Music/_DSC0627.jpeg" loading="lazy">
-      <img src="Music/_DSC0767.jpeg" loading="lazy">
-    </div>
-  </section>
+  </div>
 
   <!-- SPORTS -->
-  <section id="sports" class="category-section">
-    <div class="category-header">
-      <h2>Sports Photography</h2>
-      <p>Action, intensity, performance & winning moments.</p>
+  <div id="sports" class="category-section">
+    <h2 class="section-title">
+      Sports Photography
+      <span>Action, intensity & athletic moments</span>
+    </h2>
+    <div class="gallery Sports">
+      <!-- PASTE ALL YOUR SPORTS <img> TAGS HERE -->
     </div>
-    <div class="gallery">
-      <img src="Sports/DSC_0959.jpeg" loading="lazy">
-      <img src="Sports/DSC_0996.jpeg" loading="lazy">
-      <img src="Sports/IMG_0315.jpeg" loading="lazy">
-      <img src="Sports/IMG_0489.jpeg" loading="lazy">
-      <img src="Sports/IMG_0491.jpeg" loading="lazy">
-      <img src="Sports/IMG_0519.jpeg" loading="lazy">
-      <img src="Sports/IMG_2867.jpeg" loading="lazy">
-    </div>
-  </section>
-
-  <!-- MISC -->
-  <section id="misc" class="category-section">
-    <div class="category-header">
-      <h2>Miscellaneous</h2>
-      <p>Creative frames, moments & experimental photography.</p>
-    </div>
-    <div class="gallery">
-      <img src="Miscellaneous/IMG_6073.JPG" loading="lazy">
-      <img src="Miscellaneous/IMG_6405.jpeg" loading="lazy">
-      <img src="Miscellaneous/IMG_6685.jpeg" loading="lazy">
-    </div>
-  </section>
+  </div>
 
 </section>
-
 
 
 <section id="contact">
@@ -506,27 +469,42 @@
 
 <script>
 function showCategory(id) {
-  document.querySelectorAll('.category-section').forEach(section => {
+  const sections = document.querySelectorAll('.category-section');
+
+  sections.forEach(section => {
     section.style.display = 'none';
   });
 
   const active = document.getElementById(id);
   if (active) {
     active.style.display = 'block';
-    active.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+    // wait for browser to render, then scroll
+    setTimeout(() => {
+      active.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }, 50);
   }
 }
 
 function showAll() {
-  document.querySelectorAll('.category-section').forEach(section => {
+  const sections = document.querySelectorAll('.category-section');
+
+  sections.forEach(section => {
     section.style.display = 'block';
+  });
+
+  document.getElementById('portfolio').scrollIntoView({
+    behavior: 'smooth',
+    block: 'start'
   });
 }
 </script>
-
-
 </body>
 </html>
+
 
 
 
