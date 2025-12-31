@@ -93,11 +93,22 @@
     </div>
   </header>
 
- <section id="portfolio">
+  <div class="filters">
+  <button onclick="filterGallery('all')">All</button>
+  <button onclick="filterGallery('Concerts')">Concerts</button>
+  <button onclick="filterGallery('Dance')">Dance</button>
+  <button onclick="filterGallery('DJ')">DJ</button>
+  <button onclick="filterGallery('Music')">Music</button>
+  <button onclick="filterGallery('Photoshoot')">Photoshoot</button>
+  <button onclick="filterGallery('Sports')">Sports</button>
+</div>
+
+ 
+  <section id="portfolio">
 
   <!-- CONCERT -->
   <h2>Concert</h2>
-  <div class="gallery">
+  <div class="gallery Concerts">
     <img src="Concerts/simar(1).jpg" loading="lazy">
     <img src="Concerts/simar(3).jpg" loading="lazy">
     <img src="Concerts/simar(4).jpg" loading="lazy">
@@ -108,7 +119,7 @@
 
   <!-- DANCE -->
   <h2>Dance</h2>
-  <div class="gallery">
+  <div class="gallery Dance">
     <img src="Dance/DSC_2988.jpeg" loading="lazy">
     <img src="Dance/DSC_4503.jpeg" loading="lazy">
     <img src="Dance/DSC_5197.jpeg" loading="lazy">
@@ -126,14 +137,14 @@
 
   <!-- DJ -->
   <h2>DJ</h2>
-  <div class="gallery">
+  <div class="gallery DJ">
     <img src="DJ/IMG_5126.jpeg" loading="lazy">
     <img src="DJ/NU_02768.jpeg" loading="lazy">
   </div>
 
   <!-- MISCELLANEOUS -->
   <h2>Miscellaneous</h2>
-  <div class="gallery">
+  <div class="gallery Miscellaneous">
     <img src="Miscellaneous/IMG_6073.JPG" loading="lazy">
     <img src="Miscellaneous/IMG_6405.jpeg" loading="lazy">
     <img src="Miscellaneous/IMG_6685.jpeg" loading="lazy">
@@ -141,7 +152,7 @@
 
   <!-- PHOTOSHOOT -->
   <h2>Photoshoot</h2>
-  <div class="gallery">
+  <div class="gallery Photoshoot">
     <img src="Photoshoot/DSC_0198.jpeg" loading="lazy">
     <img src="Photoshoot/IMG_9004.jpeg" loading="lazy">
     <img src="Photoshoot/IMG_9167.jpeg" loading="lazy">
@@ -151,7 +162,7 @@
 
 <!-- MUSIC -->
 <h2>Music</h2>
-<div class="gallery">
+<div class="gallery Music">
   <img src="Music/DSC_0008.jpeg" loading="lazy">
   <img src="Music/DSC_0050.jpeg" loading="lazy">
   <img src="Music/DSC_0102.jpeg" loading="lazy">
@@ -173,7 +184,7 @@
 
   <!-- SPORTS -->
   <h2>Sports</h2>
-  <div class="gallery">
+  <div class="gallery Sports">
     <img src="Sports/DSC_0959.jpeg" loading="lazy">
     <img src="Sports/DSC_0996.jpeg" loading="lazy">
     <img src="Sports/IMG_0315.jpeg" loading="lazy">
@@ -204,12 +215,30 @@
     </div>
   </section>
 
-  <footer>
-    © 2025 Simarpreet Singh • All Rights Reserved
-  </footer>
+ <footer>
+  © 2025 Simarpreet Singh • All Rights Reserved
+</footer>
+
+<script>
+function filterGallery(category) {
+  const galleries = document.querySelectorAll('.gallery');
+
+  galleries.forEach(gallery => {
+    if (category === 'all' || gallery.classList.contains(category)) {
+      gallery.style.display = 'grid';
+    } else {
+      gallery.style.display = 'none';
+    }
+  });
+}
+</script>
 
 </body>
 </html>
+
+</body>
+</html>
+
 
 
 
