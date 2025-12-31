@@ -219,6 +219,165 @@ img {
 .photo {
   user-select: none;
 }
+    /* =====================
+   MOBILE FIRST RESET
+===================== */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #0b0b0b;
+  color: #fff;
+}
+
+/* =====================
+   HEADER
+===================== */
+header {
+  padding: 80px 20px 40px;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 32px;
+  font-weight: 600;
+}
+
+header p {
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+/* =====================
+   FILTER BAR
+===================== */
+.filters {
+  position: sticky;
+  top: 60px;
+  z-index: 100;
+  display: flex;
+  gap: 10px;
+  padding: 12px;
+  margin: 20px auto;
+  background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(12px);
+  border-radius: 999px;
+  width: max-content;
+  max-width: 95%;
+  overflow-x: auto;
+}
+
+.filters::-webkit-scrollbar {
+  display: none;
+}
+
+.filters button {
+  padding: 8px 16px;
+  border-radius: 999px;
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.25);
+  color: #fff;
+  font-size: 13px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.filters button:hover,
+.filters button.active {
+  background: #fff;
+  color: #000;
+}
+
+/* =====================
+   SECTION HEADINGS
+===================== */
+section h2 {
+  font-size: 24px;
+  margin: 50px 20px 20px;
+  border-left: 4px solid #fff;
+  padding-left: 12px;
+}
+
+/* =====================
+   GALLERY GRID
+===================== */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  padding: 0 16px;
+}
+
+/* =====================
+   PHOTO CARD
+===================== */
+.photo {
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  background: #000;
+}
+
+.photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.photo:hover img {
+  transform: scale(1.05);
+}
+
+/* =====================
+   WATERMARK
+===================== */
+.photo::after {
+  content: "© Simarpreet Singh";
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  font-size: 11px;
+  color: rgba(255,255,255,0.75);
+  background: rgba(0,0,0,0.4);
+  padding: 4px 8px;
+  border-radius: 6px;
+  pointer-events: none;
+}
+
+/* =====================
+   TABLET
+===================== */
+@media (min-width: 768px) {
+  header h1 {
+    font-size: 42px;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    padding: 0 40px;
+  }
+}
+
+/* =====================
+   DESKTOP
+===================== */
+@media (min-width: 1200px) {
+  .gallery {
+    grid-template-columns: repeat(4, 1fr);
+    max-width: 1400px;
+    margin: auto;
+  }
+
+  section h2 {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1400px;
+  }
+}
+
 
 
 
@@ -415,6 +574,7 @@ function filterGallery(category, btn) {
 
 </body>
 </html>
+
 
 
 
