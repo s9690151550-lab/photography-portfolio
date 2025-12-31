@@ -1,521 +1,202 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- ===== SEO ===== -->
-  <title>Simarpreet Singh | Professional Photographer</title>
-  <meta name="description" content="Simarpreet Singh is a professional photographer specializing in concert photography, dance, DJ events, photoshoots, music and sports photography. Available for events and bookings." />
-  <meta name="keywords" content="Simarpreet Singh photographer, concert photography India, event photographer, dance photography, DJ photography, photoshoot photographer, sports photography" />
-  <meta name="author" content="Simarpreet Singh" />
+<title>Simarpreet Singh | Professional Photographer</title>
+<meta name="description" content="Simarpreet Singh – Professional photographer for concerts, dance, DJ events, photoshoots, music & sports. Available for bookings.">
+<meta name="keywords" content="concert photographer India, dance photography, DJ photography, sports photographer">
+<meta name="author" content="Simarpreet Singh">
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="Simarpreet Singh | Professional Photographer" />
-  <meta property="og:description" content="Concerts • Dance • DJ • Photoshoots • Music • Sports" />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="https://moodinpixels.online/og-image.jpg" />
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      font-family: 'Poppins', sans-serif;
-      background: #0b0b0b;
-      color: #fff;
-      line-height: 1.6;
-    }
-
-    /* ===== NAV ===== */
-    nav {
-      display: flex;
-      justify-content: space-between;
-      padding: 20px 40px;
-      position: sticky;
-      top: 0;
-      background: rgba(0,0,0,0.85);
-      z-index: 100;
-    }
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 20px;
-    }
-    nav a {
-      color: #fff;
-      text-decoration: none;
-      font-weight: 500;
-    }
-
-    /* ===== HEADER ===== */
-    header {
-      text-align: center;
-      padding: 80px 20px 40px;
-    }
-    header h1 { font-size: 42px; }
-    header p { opacity: 0.8; }
-
-    /* ===== FILTERS ===== */
-    .filters {
-      display: flex;
-      gap: 12px;
-      justify-content: center;
-      flex-wrap: wrap;
-      margin: 30px auto;
-      padding: 12px;
-      background: rgba(0,0,0,0.6);
-      border-radius: 999px;
-      width: fit-content;
-    }
-    .filters button {
-      padding: 8px 18px;
-      background: transparent;
-      border: 1px solid #555;
-      color: #fff;
-      border-radius: 999px;
-      cursor: pointer;
-    }
-    .filters button.active {
-      background: #fff;
-      color: #000;
-    }
-
-    /* ===== SECTIONS ===== */
-    section {
-      padding: 60px 40px;
-    }
-    .section-title {
-      font-size: 28px;
-      margin-bottom: 20px;
-    }
-    .section-title span {
-      display: block;
-      font-size: 14px;
-      opacity: 0.7;
-    }
-    .category-header {
-  max-width: 1200px;
-  margin: 40px auto 20px;
-  padding: 0 10px;
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  font-family:Poppins,sans-serif;
+  background:#0b0b0b;
+  color:#fff;
 }
-
-.category-header h2 {
-  font-size: 28px;
-  margin-bottom: 6px;
+nav{
+  position:sticky;top:0;z-index:100;
+  display:flex;justify-content:space-between;
+  padding:18px 40px;
+  background:rgba(0,0,0,.9)
 }
-
-.category-header p {
-  font-size: 14px;
-  opacity: 0.75;
+nav a{color:#fff;text-decoration:none;margin-left:20px}
+header{text-align:center;padding:90px 20px 40px}
+header h1{font-size:42px}
+.filters{
+  display:flex;gap:12px;justify-content:center;
+  margin:30px auto;padding:12px;
+  background:#111;border-radius:999px;width:max-content
 }
-
-   /* ===== GALLERY FIX ===== */
-
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-  gap: 16px;
-  max-width: 1400px;
-  margin: 0 auto;
+.filters button{
+  background:none;border:1px solid #555;
+  color:#fff;padding:8px 18px;border-radius:999px;
+  cursor:pointer
 }
-
-.gallery img {
-  width: 100%;
-  height: auto;              /* IMPORTANT */
-  aspect-ratio: 3 / 4;       /* keeps photos proportional */
-  object-fit: cover;         /* fills nicely without distortion */
-  border-radius: 14px;
-  cursor: pointer;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+section{padding:60px 30px}
+.category-section{display:block}
+.section-title{font-size:28px;margin-bottom:8px}
+.section-title span{font-size:14px;opacity:.7}
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(260px,1fr));
+  gap:16px;margin-top:20px
 }
-
-.gallery img:hover {
-  transform: scale(1.03);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+.photo{position:relative}
+.photo img{
+  width:100%;aspect-ratio:3/4;
+  object-fit:cover;border-radius:14px
 }
-
-    /* ===== WATERMARK ===== */
-    .photo::after {
-      content: "© Simarpreet Singh";
-      position: absolute;
-      bottom: 10px;
-      right: 10px;
-      font-size: 12px;
-      color: rgba(255,255,255,0.75);
-      background: rgba(0,0,0,0.4);
-      padding: 4px 8px;
-      border-radius: 6px;
-    }
-
-    /* ===== CONTACT ===== */
-    #contact form {
-      max-width: 500px;
-      margin: auto;
-      display: grid;
-      gap: 12px;
-    }
-    #contact input, #contact textarea {
-      padding: 12px;
-      border-radius: 6px;
-      border: none;
-    }
-    #contact button {
-      padding: 12px;
-      background: #fff;
-      color: #000;
-      border: none;
-      cursor: pointer;
-      font-weight: 600;
-    }
-
-    footer {
-      text-align: center;
-      padding: 30px;
-      opacity: 0.6;
-    }
-
-    /* ===== MOBILE ===== */
-    @media (max-width: 768px) {
-      nav { flex-direction: column; gap: 10px; }
-      header h1 { font-size: 32px; }
-      section { padding: 40px 20px; }
-    }
-    .social-links {
-  display: flex;
-  justify-content: center;
-  gap: 16px;
-  margin-bottom: 30px;
-  flex-wrap: wrap;
+.photo::after{
+  content:"© Simarpreet Singh";
+  position:absolute;bottom:10px;right:10px;
+  font-size:12px;
+  background:rgba(0,0,0,.5);
+  padding:4px 8px;border-radius:6px
 }
-
-.social-links a {
-  padding: 10px 18px;
-  border-radius: 999px;
-  background: rgba(255,255,255,0.1);
-  color: #fff;
-  text-decoration: none;
-  font-size: 14px;
-  border: 1px solid rgba(255,255,255,0.2);
-  transition: 0.3s;
+#contact{text-align:center}
+.contact-buttons{display:flex;gap:14px;justify-content:center;margin-bottom:30px;flex-wrap:wrap}
+.contact-buttons a{
+  padding:10px 18px;border:1px solid #555;
+  border-radius:999px;color:#fff;text-decoration:none
 }
-
-.social-links a:hover {
-  background: #fff;
-  color: #000;
+.contact-form{max-width:600px;margin:auto;display:grid;gap:14px}
+.contact-form input,.contact-form textarea{
+  padding:14px;border-radius:8px;border:none
 }
-    /* ===== CONTACT SECTION ===== */
-
-#contact {
-  max-width: 900px;
-  margin: auto;
-  text-align: center;
+.contact-form button{
+  padding:14px;border-radius:999px;
+  border:none;background:#fff;color:#000;font-weight:600
 }
-
-.category-header p {
-  opacity: 0.75;
-  margin-bottom: 20px;
+footer{text-align:center;padding:30px;opacity:.6}
+@media(max-width:768px){
+  header h1{font-size:32px}
 }
-
-/* Buttons */
-.contact-buttons {
-  display: flex;
-  justify-content: center;
-  gap: 14px;
-  margin-bottom: 40px;
-  flex-wrap: wrap;
-}
-
-.contact-buttons a {
-  padding: 10px 18px;
-  border-radius: 30px;
-  border: 1px solid #666;
-  color: #fff;
-  font-size: 14px;
-  transition: all 0.3s ease;
-}
-
-.contact-buttons a:hover {
-  background: #fff;
-  color: #000;
-}
-
-/* Form */
-.contact-form {
-  display: grid;
-  gap: 14px;
-  max-width: 600px;
-  margin: auto;
-}
-
-.contact-form input,
-.contact-form select,
-.contact-form textarea {
-  padding: 14px;
-  border-radius: 8px;
-  border: 1px solid #333;
-  background: #111;
-  color: #fff;
-  font-size: 14px;
-}
-
-.contact-form button {
-  margin-top: 10px;
-  padding: 14px;
-  border-radius: 30px;
-  background: #fff;
-  color: #000;
-  font-weight: 600;
-  cursor: pointer;
-  border: none;
-}
-
-.contact-form button:hover {
-  opacity: 0.85;
-}
-
-/* Mobile */
-@media (max-width: 600px) {
-  .contact-buttons {
-    flex-direction: column;
-  }
-}
-/* ===== Smooth fade animation for galleries & headers ===== */
-.gallery,
-.category-header {
-  transition: opacity 0.35s ease, transform 0.35s ease;
-}
-
-.hidden {
-  opacity: 0;
-  transform: translateY(10px);
-  pointer-events: none;
-}
-
-.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-/* ===== CATEGORY VISIBILITY FIX ===== */
-.category-section {
-  display: block;
-}
-    .category-section {
-  display: block;
-}
-
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 20px;
-}
-
-.photo img {
-  width: 100%;
-  border-radius: 12px;
-  display: block;
-}
-.category-section {
-  display: block;
-  margin-bottom: 90px;
-}
-
-.section-title {
-  font-size: 30px;
-  margin-bottom: 24px;
-}
-
-.section-title span {
-  display: block;
-  font-size: 14px;
-  opacity: 0.7;
-  margin-top: 6px;
-}
-
-  </style>
+</style>
 </head>
 
 <body>
 
 <nav>
   <strong>Simarpreet Singh</strong>
-  <ul>
-    <li><a href="#portfolio">Portfolio</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
+  <div>
+    <a href="#portfolio">Portfolio</a>
+    <a href="#contact">Contact</a>
+  </div>
 </nav>
 
 <header>
   <h1>Simarpreet Singh</h1>
-  <p>Concert • Dance • DJ • Photoshoots • Music • Sports</p>
+  <p>Concert • Dance • DJ • Photoshoot • Music • Sports</p>
 </header>
 
 <div class="filters">
   <button onclick="showAll()">All</button>
-  <button onclick="showCategory('concerts')">Concerts</button>
-  <button onclick="showCategory('dance')">Dance</button>
-  <button onclick="showCategory('dj')">DJ</button>
-  <button onclick="showCategory('photoshoot')">Photoshoot</button>
-  <button onclick="showCategory('music')">Music</button>
-  <button onclick="showCategory('sports')">Sports</button>
+  <button onclick="showOnly('concerts')">Concerts</button>
+  <button onclick="showOnly('dance')">Dance</button>
+  <button onclick="showOnly('dj')">DJ</button>
+  <button onclick="showOnly('photoshoot')">Photoshoot</button>
+  <button onclick="showOnly('music')">Music</button>
+  <button onclick="showOnly('sports')">Sports</button>
 </div>
-
-
 
 <section id="portfolio">
 
-  <!-- CONCERTS -->
-  <div id="concerts" class="category-section">
-    <h2 class="section-title">
-      Concert Photography
-      <span>Live shows, artists & crowd energy</span>
-    </h2>
-    <div class="gallery Concerts">
-      <!-- PASTE ALL YOUR CONCERT <img> TAGS HERE -->
-    </div>
-  </div>
+<!-- CONCERTS -->
+<div id="concerts" class="category-section">
+<h2 class="section-title">Concert Photography <span>Live shows & crowd energy</span></h2>
+<div class="gallery">
+<div class="photo"><img src="Concerts/simar(1).jpg"></div>
+<div class="photo"><img src="Concerts/simar(3).jpg"></div>
+<div class="photo"><img src="Concerts/simar(4).jpg"></div>
+<div class="photo"><img src="Concerts/simar(6).jpg"></div>
+<div class="photo"><img src="Concerts/simar(7).jpg"></div>
+<div class="photo"><img src="Concerts/simar(8).jpg"></div>
+</div>
+</div>
 
-  <!-- DANCE -->
-  <div id="dance" class="category-section">
-    <h2 class="section-title">
-      Dance Photography
-      <span>Movement, expressions & stage performance</span>
-    </h2>
-    <div class="gallery Dance">
-      <!-- PASTE ALL YOUR DANCE <img> TAGS HERE -->
-    </div>
-  </div>
+<!-- DANCE -->
+<div id="dance" class="category-section">
+<h2 class="section-title">Dance Photography <span>Movement & expressions</span></h2>
+<div class="gallery">
+<div class="photo"><img src="Dance/DSC_2988.jpeg"></div>
+<div class="photo"><img src="Dance/DSC_4503.jpeg"></div>
+<div class="photo"><img src="Dance/DSC_5197.jpeg"></div>
+<div class="photo"><img src="Dance/DSC_5222.jpeg"></div>
+</div>
+</div>
 
-  <!-- DJ -->
-  <div id="dj" class="category-section">
-    <h2 class="section-title">
-      DJ Photography
-      <span>Club nights, DJs & nightlife vibes</span>
-    </h2>
-    <div class="gallery DJ">
-      <!-- PASTE ALL YOUR DJ <img> TAGS HERE -->
-    </div>
-  </div>
+<!-- DJ -->
+<div id="dj" class="category-section">
+<h2 class="section-title">DJ Photography <span>Clubs & nightlife</span></h2>
+<div class="gallery">
+<div class="photo"><img src="DJ/IMG_5126.jpeg"></div>
+<div class="photo"><img src="DJ/NU_02768.jpeg"></div>
+</div>
+</div>
 
-  <!-- PHOTOSHOOT -->
-  <div id="photoshoot" class="category-section">
-    <h2 class="section-title">
-      Photoshoots
-      <span>Portraits, fashion & creative shoots</span>
-    </h2>
-    <div class="gallery Photoshoot">
-      <!-- PASTE ALL YOUR PHOTOSHOOT <img> TAGS HERE -->
-    </div>
-  </div>
+<!-- MUSIC -->
+<div id="music" class="category-section">
+<h2 class="section-title">Music Photography <span>Bands & instruments</span></h2>
+<div class="gallery">
+<div class="photo"><img src="Music/DSC_0008.jpeg"></div>
+<div class="photo"><img src="Music/DSC_0050.jpeg"></div>
+<div class="photo"><img src="Music/DSC_0102.jpeg"></div>
+</div>
+</div>
 
-  <!-- MUSIC -->
-  <div id="music" class="category-section">
-    <h2 class="section-title">
-      Music Photography
-      <span>Bands, instruments & studio moments</span>
-    </h2>
-    <div class="gallery Music">
-      <!-- PASTE ALL YOUR MUSIC <img> TAGS HERE -->
-    </div>
-  </div>
-
-  <!-- SPORTS -->
-  <div id="sports" class="category-section">
-    <h2 class="section-title">
-      Sports Photography
-      <span>Action, intensity & athletic moments</span>
-    </h2>
-    <div class="gallery Sports">
-      <!-- PASTE ALL YOUR SPORTS <img> TAGS HERE -->
-    </div>
-  </div>
+<!-- SPORTS -->
+<div id="sports" class="category-section">
+<h2 class="section-title">Sports Photography <span>Action & intensity</span></h2>
+<div class="gallery">
+<div class="photo"><img src="Sports/DSC_0959.jpeg"></div>
+<div class="photo"><img src="Sports/IMG_0315.jpeg"></div>
+</div>
+</div>
 
 </section>
-
 
 <section id="contact">
-  <h2 class="section-title">
-    Contact
-    <span>For photoshoots, concerts & events</span>
-  </h2>
+<h2 class="section-title">Contact <span>Bookings & enquiries</span></h2>
 
-  <!-- Contact Buttons -->
-  <div class="contact-buttons">
-    <a href="https://www.instagram.com/moodinpixels__?igsh=MWhsMTI0M2hrYThwMg==" target="_blank">Instagram</a>
-    <a href="mailto:moodinpixels@gmail.com">Email</a>
-    <a href="https://wa.me/919690151550" target="_blank">WhatsApp</a>
-  </div>
+<div class="contact-buttons">
+<a href="https://instagram.com/moodinpixels__" target="_blank">Instagram</a>
+<a href="mailto:moodinpixels@gmail.com">Email</a>
+<a href="https://wa.me/919690151550" target="_blank">WhatsApp</a>
+</div>
 
-  <!-- Contact Form -->
-  <form class="contact-form" onsubmit="sendWhatsApp(event)">
-    <input type="text" name="name" placeholder="Your Name" required>
-
-    <input type="email" name="email" placeholder="Your Email" required>
-
-    <!-- OPEN TEXT FIELD (NO DROPDOWN) -->
-    <input type="text" name="requirement" placeholder="Type your requirement (photoshoot, event, concert...)" required>
-
-    <textarea name="message" placeholder="Tell me more about your project" rows="5"></textarea>
-
-    <button type="submit">Send Enquiry</button>
-  </form>
+<form class="contact-form" onsubmit="sendWhatsApp(event)">
+<input name="name" placeholder="Your Name" required>
+<input name="email" type="email" placeholder="Your Email" required>
+<textarea name="message" placeholder="Your requirement" required></textarea>
+<button>Send Enquiry</button>
+</form>
 </section>
 
-
-<footer>
-  © 2025 Simarpreet Singh — All Rights Reserved
-</footer>
+<footer>© 2025 Simarpreet Singh</footer>
 
 <script>
-function showCategory(id) {
-  const sections = document.querySelectorAll('.category-section');
-
-  sections.forEach(section => {
-    section.style.display = 'none';
-  });
-
-  const active = document.getElementById(id);
-  if (active) {
-    active.style.display = 'block';
-
-    // wait for browser to render, then scroll
-    setTimeout(() => {
-      active.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start'
-      });
-    }, 50);
-  }
+function showOnly(id){
+  document.querySelectorAll('.category-section').forEach(s=>s.style.display='none');
+  const el=document.getElementById(id);
+  el.style.display='block';
+  setTimeout(()=>el.scrollIntoView({behavior:'smooth'}),50);
 }
-
-function showAll() {
-  const sections = document.querySelectorAll('.category-section');
-
-  sections.forEach(section => {
-    section.style.display = 'block';
-  });
-
-  document.getElementById('portfolio').scrollIntoView({
-    behavior: 'smooth',
-    block: 'start'
-  });
+function showAll(){
+  document.querySelectorAll('.category-section').forEach(s=>s.style.display='block');
+  document.getElementById('portfolio').scrollIntoView({behavior:'smooth'});
+}
+function sendWhatsApp(e){
+  e.preventDefault();
+  const f=e.target;
+  const msg=`Name: ${f.name.value}%0AEmail: ${f.email.value}%0A${f.message.value}`;
+  window.open(`https://wa.me/919690151550?text=${msg}`,'_blank');
 }
 </script>
+
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
