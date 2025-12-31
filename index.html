@@ -4,111 +4,71 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Simarpreet Singh | Professional Photographer</title>
-<meta name="description" content="Simarpreet Singh – Professional photographer for concerts, dance, DJ events, photoshoots, music & sports. Available for bookings.">
-<meta name="keywords" content="concert photographer India, dance photography, DJ photography, sports photographer">
+<title>Simarpreet Singh | Photographer</title>
+<meta name="description" content="Professional photographer for concerts, dance, DJ, photoshoots, music and sports.">
 <meta name="author" content="Simarpreet Singh">
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{
-  font-family:Poppins,sans-serif;
-  background:#0b0b0b;
-  color:#fff;
-}
-nav{
-  position:sticky;top:0;z-index:100;
-  display:flex;justify-content:space-between;
-  padding:18px 40px;
-  background:rgba(0,0,0,.9)
-}
+body{font-family:Poppins,sans-serif;background:#0b0b0b;color:#fff}
+nav{position:sticky;top:0;z-index:100;background:#000;padding:18px 40px;display:flex;justify-content:space-between}
 nav a{color:#fff;text-decoration:none;margin-left:20px}
 header{text-align:center;padding:90px 20px 40px}
 header h1{font-size:42px}
-.filters{
-  display:flex;gap:12px;justify-content:center;
-  margin:30px auto;padding:12px;
-  background:#111;border-radius:999px;width:max-content
-}
-.filters button{
-  background:none;border:1px solid #555;
-  color:#fff;padding:8px 18px;border-radius:999px;
-  cursor:pointer
-}
+.filters{display:flex;gap:12px;justify-content:center;margin:30px auto;padding:12px;background:#111;border-radius:999px;width:max-content}
+.filters button{background:none;border:1px solid #555;color:#fff;padding:8px 18px;border-radius:999px;cursor:pointer}
 section{padding:60px 30px}
-.category-section{display:block}
-.section-title{font-size:28px;margin-bottom:8px}
-.section-title span{font-size:14px;opacity:.7}
-.gallery{
-  display:grid;
-  grid-template-columns:repeat(auto-fill,minmax(260px,1fr));
-  gap:16px;margin-top:20px
-}
+.category-section{display:block;margin-bottom:90px}
+.section-title{font-size:28px;margin-bottom:10px}
+.section-title span{display:block;font-size:14px;opacity:.7}
+.gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px;margin-top:20px}
 .photo{position:relative}
-.photo img{
-  width:100%;aspect-ratio:3/4;
-  object-fit:cover;border-radius:14px
-}
-.photo::after{
-  content:"© Simarpreet Singh";
-  position:absolute;bottom:10px;right:10px;
-  font-size:12px;
-  background:rgba(0,0,0,.5);
-  padding:4px 8px;border-radius:6px
-}
+.photo img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:14px}
+.photo::after{content:"© Simarpreet Singh";position:absolute;bottom:10px;right:10px;font-size:12px;background:rgba(0,0,0,.5);padding:4px 8px;border-radius:6px}
 #contact{text-align:center}
 .contact-buttons{display:flex;gap:14px;justify-content:center;margin-bottom:30px;flex-wrap:wrap}
-.contact-buttons a{
-  padding:10px 18px;border:1px solid #555;
-  border-radius:999px;color:#fff;text-decoration:none
-}
+.contact-buttons a{padding:10px 18px;border:1px solid #555;border-radius:999px;color:#fff;text-decoration:none}
 .contact-form{max-width:600px;margin:auto;display:grid;gap:14px}
-.contact-form input,.contact-form textarea{
-  padding:14px;border-radius:8px;border:none
-}
-.contact-form button{
-  padding:14px;border-radius:999px;
-  border:none;background:#fff;color:#000;font-weight:600
-}
+.contact-form input,.contact-form textarea{padding:14px;border-radius:8px;border:none}
+.contact-form button{padding:14px;border-radius:999px;border:none;background:#fff;color:#000;font-weight:600}
 footer{text-align:center;padding:30px;opacity:.6}
-@media(max-width:768px){
-  header h1{font-size:32px}
-}
+@media(max-width:768px){header h1{font-size:32px}}
 </style>
 </head>
 
 <body>
 
 <nav>
-  <strong>Simarpreet Singh</strong>
-  <div>
-    <a href="#portfolio">Portfolio</a>
-    <a href="#contact">Contact</a>
-  </div>
+<strong>Simarpreet Singh</strong>
+<div>
+<a href="#portfolio">Portfolio</a>
+<a href="#contact">Contact</a>
+</div>
 </nav>
 
 <header>
-  <h1>Simarpreet Singh</h1>
-  <p>Concert • Dance • DJ • Photoshoot • Music • Sports</p>
+<h1>Simarpreet Singh</h1>
+<p>Concert • Dance • DJ • Photoshoot • Music • Sports</p>
 </header>
 
 <div class="filters">
-  <button onclick="showAll()">All</button>
-  <button onclick="showOnly('concerts')">Concerts</button>
-  <button onclick="showOnly('dance')">Dance</button>
-  <button onclick="showOnly('dj')">DJ</button>
-  <button onclick="showOnly('photoshoot')">Photoshoot</button>
-  <button onclick="showOnly('music')">Music</button>
-  <button onclick="showOnly('sports')">Sports</button>
+<button onclick="showAll()">All</button>
+<button onclick="showOnly('concerts')">Concerts</button>
+<button onclick="showOnly('dance')">Dance</button>
+<button onclick="showOnly('dj')">DJ</button>
+<button onclick="showOnly('photoshoot')">Photoshoot</button>
+<button onclick="showOnly('music')">Music</button>
+<button onclick="showOnly('sports')">Sports</button>
+<button onclick="showOnly('misc')">Misc</button>
 </div>
 
 <section id="portfolio">
 
 <!-- CONCERTS -->
 <div id="concerts" class="category-section">
-<h2 class="section-title">Concert Photography <span>Live shows & crowd energy</span></h2>
+<h2 class="section-title">Concert Photography <span>Live performances & crowd energy</span></h2>
 <div class="gallery">
 <div class="photo"><img src="Concerts/simar(1).jpg"></div>
 <div class="photo"><img src="Concerts/simar(3).jpg"></div>
@@ -123,10 +83,19 @@ footer{text-align:center;padding:30px;opacity:.6}
 <div id="dance" class="category-section">
 <h2 class="section-title">Dance Photography <span>Movement & expressions</span></h2>
 <div class="gallery">
+<div class="photo"><img src="Dance/DSC05520.jpeg"></div>
 <div class="photo"><img src="Dance/DSC_2988.jpeg"></div>
 <div class="photo"><img src="Dance/DSC_4503.jpeg"></div>
 <div class="photo"><img src="Dance/DSC_5197.jpeg"></div>
 <div class="photo"><img src="Dance/DSC_5222.jpeg"></div>
+<div class="photo"><img src="Dance/DSC_5223.jpeg"></div>
+<div class="photo"><img src="Dance/DSC_5344.jpeg"></div>
+<div class="photo"><img src="Dance/IMG_5721.jpeg"></div>
+<div class="photo"><img src="Dance/IMG_5831.jpeg"></div>
+<div class="photo"><img src="Dance/IMG_5904.jpeg"></div>
+<div class="photo"><img src="Dance/IMG_5981.jpeg"></div>
+<div class="photo"><img src="Dance/NU_03480.jpeg"></div>
+<div class="photo"><img src="Dance/NU_04650.jpeg"></div>
 </div>
 </div>
 
@@ -139,13 +108,35 @@ footer{text-align:center;padding:30px;opacity:.6}
 </div>
 </div>
 
+<!-- PHOTOSHOOT -->
+<div id="photoshoot" class="category-section">
+<h2 class="section-title">Photoshoots <span>Portraits & creative shoots</span></h2>
+<div class="gallery">
+<div class="photo"><img src="Photoshoot/DSC_0198.jpeg"></div>
+<div class="photo"><img src="Photoshoot/IMG_9004.jpeg"></div>
+<div class="photo"><img src="Photoshoot/IMG_9167.jpeg"></div>
+<div class="photo"><img src="Photoshoot/IMG_9170.jpeg"></div>
+<div class="photo"><img src="Photoshoot/IMG_9964.jpeg"></div>
+</div>
+</div>
+
 <!-- MUSIC -->
 <div id="music" class="category-section">
-<h2 class="section-title">Music Photography <span>Bands & instruments</span></h2>
+<h2 class="section-title">Music Photography <span>Artists & instruments</span></h2>
 <div class="gallery">
 <div class="photo"><img src="Music/DSC_0008.jpeg"></div>
 <div class="photo"><img src="Music/DSC_0050.jpeg"></div>
 <div class="photo"><img src="Music/DSC_0102.jpeg"></div>
+<div class="photo"><img src="Music/DSC_0116.jpeg"></div>
+<div class="photo"><img src="Music/DSC_0177.jpeg"></div>
+<div class="photo"><img src="Music/DSC_0481.jpeg"></div>
+<div class="photo"><img src="Music/DSC_0808.jpeg"></div>
+<div class="photo"><img src="Music/NU_09497.jpeg"></div>
+<div class="photo"><img src="Music/NU_09831.jpeg"></div>
+<div class="photo"><img src="Music/NU_09832.jpeg"></div>
+<div class="photo"><img src="Music/_DSC0604.jpeg"></div>
+<div class="photo"><img src="Music/_DSC0627.jpeg"></div>
+<div class="photo"><img src="Music/_DSC0767.jpeg"></div>
 </div>
 </div>
 
@@ -154,7 +145,22 @@ footer{text-align:center;padding:30px;opacity:.6}
 <h2 class="section-title">Sports Photography <span>Action & intensity</span></h2>
 <div class="gallery">
 <div class="photo"><img src="Sports/DSC_0959.jpeg"></div>
+<div class="photo"><img src="Sports/DSC_0996.jpeg"></div>
 <div class="photo"><img src="Sports/IMG_0315.jpeg"></div>
+<div class="photo"><img src="Sports/IMG_0489.jpeg"></div>
+<div class="photo"><img src="Sports/IMG_0491.jpeg"></div>
+<div class="photo"><img src="Sports/IMG_0519.jpeg"></div>
+<div class="photo"><img src="Sports/IMG_2867.jpeg"></div>
+</div>
+</div>
+
+<!-- MISC -->
+<div id="misc" class="category-section">
+<h2 class="section-title">Miscellaneous <span>Creative & candid moments</span></h2>
+<div class="gallery">
+<div class="photo"><img src="Miscellaneous/IMG_6073.JPG"></div>
+<div class="photo"><img src="Miscellaneous/IMG_6405.jpeg"></div>
+<div class="photo"><img src="Miscellaneous/IMG_6685.jpeg"></div>
 </div>
 </div>
 
@@ -173,7 +179,7 @@ footer{text-align:center;padding:30px;opacity:.6}
 <input name="name" placeholder="Your Name" required>
 <input name="email" type="email" placeholder="Your Email" required>
 <textarea name="message" placeholder="Your requirement" required></textarea>
-<button>Send Enquiry</button>
+<button type="submit">Send Enquiry</button>
 </form>
 </section>
 
@@ -181,20 +187,20 @@ footer{text-align:center;padding:30px;opacity:.6}
 
 <script>
 function showOnly(id){
-  document.querySelectorAll('.category-section').forEach(s=>s.style.display='none');
-  const el=document.getElementById(id);
-  el.style.display='block';
-  setTimeout(()=>el.scrollIntoView({behavior:'smooth'}),50);
+document.querySelectorAll('.category-section').forEach(s=>s.style.display='none');
+const el=document.getElementById(id);
+el.style.display='block';
+setTimeout(()=>el.scrollIntoView({behavior:'smooth'}),50);
 }
 function showAll(){
-  document.querySelectorAll('.category-section').forEach(s=>s.style.display='block');
-  document.getElementById('portfolio').scrollIntoView({behavior:'smooth'});
+document.querySelectorAll('.category-section').forEach(s=>s.style.display='block');
+document.getElementById('portfolio').scrollIntoView({behavior:'smooth'});
 }
 function sendWhatsApp(e){
-  e.preventDefault();
-  const f=e.target;
-  const msg=`Name: ${f.name.value}%0AEmail: ${f.email.value}%0A${f.message.value}`;
-  window.open(`https://wa.me/919690151550?text=${msg}`,'_blank');
+e.preventDefault();
+const f=e.target;
+const msg=`Name: ${f.name.value}\nEmail: ${f.email.value}\n${f.message.value}`;
+window.open(`https://wa.me/919690151550?text=${encodeURIComponent(msg)}`,'_blank');
 }
 </script>
 
