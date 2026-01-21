@@ -242,6 +242,19 @@ footer{
   object-fit:cover;
   border-radius:14px;
 }
+.photo-card{
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+}
+
+.photo-card span{
+  font-size:13px;
+  opacity:.7;
+  text-align:center;
+  letter-spacing:.5px;
+}
+
 
 /* DESKTOP */
 @media(min-width:900px){
@@ -305,11 +318,30 @@ html{
       </div>
     </div>
 
-    <div class="home-photos">
-      <img src="me/me4.jpg" loading="lazy" decoding="async" alt="Simarpreet Singh shooting live moments">
-      <img src="me/me3.jpg" loading="lazy" decoding="async" alt="Simarpreet Singh on ground with camera gear">
-      <img src="me/me2.jpg" loading="lazy" decoding="async" alt="Simarpreet Singh wrapping up a shoot">
-    </div>
+  <div class="home-photos">
+
+  <div class="photo-card">
+    <img src="Me/me4.jpg" alt="Simarpreet Singh shooting live moments">
+    <span>In The Moment Shooting</span>
+  </div>
+
+  <div class="photo-card">
+    <img src="Me/me3.jpg" alt="Simarpreet Singh on ground with camera gear">
+    <span>On Ground. In Action.</span>
+  </div>
+
+  <div class="photo-card">
+    <img src="Me/me2.jpg" alt="Simarpreet Singh wrapping up a shoot">
+    <span>After The Shot Counts</span>
+  </div>
+
+  <div class="photo-card">
+    <img src="Me/me1.jpg" alt="Simarpreet Singh photographer portrait">
+    <span>The Face Behind Frames</span>
+  </div>
+
+</div>
+
 
   </div>
 </section>
@@ -494,6 +526,7 @@ function closeLightbox(){
 
 </body>
 </html>
+
 
 
 
