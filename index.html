@@ -192,24 +192,118 @@ footer{
   color:#fff;
   cursor:pointer;
 }
+/* HOME / ABOUT */
+.home{
+  padding:80px 16px;
+  background:#0b0b0b;
+}
+.home-content{
+  max-width:1100px;
+  margin:auto;
+  display:grid;
+  gap:40px;
+}
+.home-text h1{
+  font-size:42px;
+  margin-bottom:12px;
+}
+.home-text p{
+  opacity:.8;
+  max-width:500px;
+}
+.home-buttons{
+  margin-top:20px;
+  display:flex;
+  gap:14px;
+}
+.btn{
+  padding:12px 22px;
+  border-radius:30px;
+  border:1px solid #444;
+  color:#fff;
+  text-decoration:none;
+  font-size:14px;
+}
+.btn.primary{
+  background:#fff;
+  color:#000;
+  border:none;
+}
+
+/* ABOUT PHOTOS */
+.home-photos{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:12px;
+}
+.home-photos img{
+  width:100%;
+  aspect-ratio:3/4;
+  object-fit:cover;
+  border-radius:14px;
+}
+
+/* DESKTOP */
+@media(min-width:900px){
+  .home-content{
+    grid-template-columns:1.1fr 1fr;
+    align-items:center;
+  }
+}
+/* TESTIMONIALS */
+.testimonials{
+  display:grid;
+  gap:16px;
+  margin-top:20px;
+}
+.testimonial{
+  background:#111;
+  border:1px solid #222;
+  padding:20px;
+  border-radius:14px;
+  font-size:14px;
+}
+.testimonial p{
+  opacity:.85;
+  margin-bottom:10px;
+}
+
 </style>
 </head>
 
 <body>
 
 <nav>
-<strong>Simarpreet Singh</strong>
-<div>
-<a href="#portfolio">Portfolio</a>
-<a href="#contact">Contact</a>
-</div>
+  <strong>Simarpreet Singh</strong>
+  <div>
+    <a href="#home">About</a>
+    <a href="#portfolio">Portfolio</a>
+    <a href="#contact">Contact</a>
+  </div>
 </nav>
+<section id="home" class="home">
+  <div class="home-content">
+    <div class="home-text">
+      <h1>Simarpreet Singh</h1>
+      <p>
+        I’m a professional photographer specialising in concerts, dance,
+        DJ events, music and sports photography.
+        I focus on capturing real energy and moments that last forever.
+      </p>
 
-<header>
-<h1>Simarpreet Singh</h1>
-<p>Concert • Dance • DJ • Photoshoot • Music • Sports</p>
-</header>
+      <div class="home-buttons">
+        <a href="#portfolio" class="btn primary">View Portfolio</a>
+        <a href="#contact" class="btn">Contact Me</a>
+      </div>
+    </div>
 
+    <div class="home-photos">
+      <img src="Me/me1.jpg" alt="Simarpreet Singh photographer portrait">
+      <img src="Me/me2.jpg" alt="Simarpreet Singh behind the scenes">
+      <img src="Me/me3.jpg" alt="Simarpreet Singh at event">
+    </div>
+  </div>
+</section>
 <div class="filters">
 <button onclick="showAll()">All</button>
 <button onclick="showOnly('concerts')">Concerts</button>
@@ -311,6 +405,36 @@ footer{
 </div>
 
 </section>
+<section id="testimonials">
+  <h2 class="section-title">
+    Testimonials <span>What clients say</span>
+  </h2>
+
+  <div class="testimonials">
+    <div class="testimonial">
+      <p>
+        “Simar captured the energy of our concert perfectly.
+        Extremely professional and fast delivery.”
+      </p>
+      <strong>— Event Organizer</strong>
+    </div>
+
+    <div class="testimonial">
+      <p>
+        “Amazing eye for moments. The dance photos were powerful and emotional.”
+      </p>
+      <strong>— Dance Crew Lead</strong>
+    </div>
+
+    <div class="testimonial">
+      <p>
+        “One of the best photographers we’ve worked with for DJ events.”
+      </p>
+      <strong>— Club Manager</strong>
+    </div>
+  </div>
+</section>
+
 
 <section id="contact">
 <h2 class="section-title">Contact <span>Bookings & enquiries</span></h2>
@@ -360,6 +484,7 @@ function closeLightbox(){
 
 </body>
 </html>
+
 
 
 
